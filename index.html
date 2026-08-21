@@ -401,13 +401,17 @@ section{
 
 /* ═══ PROJECTS ═══ */
 .projects-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
-  gap:1.3rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
+  gap:1.8rem;
+  align-items:start;
 }
 .project-card{
   background:var(--card);border:1px solid var(--border);
   padding:2rem;position:relative;overflow:hidden;
   transition:transform 0.3s,border-color 0.3s;
+  display:flex;flex-direction:column;
+  height:auto;
 }
 .project-card:hover{transform:translateY(-6px);border-color:rgba(0,245,196,0.3);}
 .proj-num{
@@ -792,7 +796,7 @@ footer span{color:var(--neon);}
   </div>
   <div class="projects-grid">
     <div class="project-card reveal">
-      <span class="proj-pulse">ACTIVE</span>
+      <span style="position:absolute;top:1.5rem;right:1.5rem;font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--muted);">RESEARCH</span>
       <div class="proj-num">_PROJECT_01</div>
       <div class="proj-title">Malaria Detection: VGG16 vs ResNet-50</div>
       <div class="proj-desc">Explored and simplified deep learning research comparing VGG16 and ResNet-50 architectures for malaria-infected cell classification in microscopic images — bridging complex CNN research into accessible insight for medical AI.</div>
@@ -815,7 +819,7 @@ footer span{color:var(--neon);}
 </div>
     <div class="project-card reveal">
   <span class="proj-pulse">ACTIVE</span>
-  <div class="proj-num">_PROJECT_05</div>
+  <div class="proj-num">_PROJECT_03</div>
   <div class="proj-title">Shiraji Villa — Tenant Management System</div>
   <div class="proj-desc">A web-based tenant record management system for tracking tenants, rent payments, and room allocations. Built with vanilla HTML, CSS, and JavaScript — no frameworks needed.</div>
   <div class="proj-stack">
