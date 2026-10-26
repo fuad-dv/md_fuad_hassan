@@ -2,7 +2,7 @@
 
 Personal portfolio built with plain HTML, CSS and JavaScript. Parrot-green glass UI with a 3D background (three.js).
 
-Live: https://fuad-dv.github.io/portfolio/
+Live: https://fuad-hassan-shiraji.netlify.app/
 
 ## Files
 - `index.html`: the whole site
