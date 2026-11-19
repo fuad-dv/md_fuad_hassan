@@ -113,6 +113,12 @@ a.card{color:inherit;display:block}
 .thumbs button{flex:1;padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;background:none;opacity:.55;transition:opacity .2s,border-color .2s}
 .thumbs button img{width:100%;display:block;aspect-ratio:16/7;object-fit:cover;border:0;border-radius:0}
 .thumbs button[aria-current=true],.thumbs button:hover{opacity:1;border-color:var(--g)}
+.main{cursor:zoom-in}
+.stage .main{aspect-ratio:4/3;object-fit:contain;background:#0b0c0f}
+.stage .thumbs button img{aspect-ratio:16/9;object-fit:cover;object-position:top}
+#lb{width:fit-content;height:auto;max-width:96vw;max-height:94vh;overflow:auto;padding:.6rem;background:rgba(8,20,12,.95);border:1px solid var(--line);border-radius:14px}
+#lb img{display:block;max-width:100%;max-height:82vh;margin:.6rem auto 0;border-radius:8px;cursor:zoom-out}
+#lb .btn{animation:none;padding:.4rem .9rem;font-size:.78rem}
 .form{display:grid;gap:.9rem}
 .form input,.form textarea{width:100%;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--line);background:rgba(0,0,0,.35);color:var(--ink);font:400 .92rem var(--m)}
 .form input:focus,.form textarea:focus{border-color:var(--g);box-shadow:0 0 0 3px rgba(95,224,74,.18);outline:0}
@@ -247,19 +253,26 @@ dialog::backdrop{background:rgba(2,8,4,.72);backdrop-filter:blur(8px)}
   <div class="g2e">
     <div class="win tilt proj in"><div class="wb"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="t">~/projects/tenant-management-system</span></div><div class="wc">
       <span class="when">Jul 2026 to present</span><h3>Tenant Management System</h3>
-      <figure class="shot"><img src="assets/tenant.jpg" alt="UI/UX case study showing the dashboard, tenant list, rent collection, advance collection and settings screens" loading="lazy"><figcaption>// UI/UX case study of the app’s main screens</figcaption></figure>
+      <figure class="shot stage"><img class="main" src="assets/tenant-1.webp" alt="Desktop dashboard of the Tenant Management System showing expected monthly rent, active tenants, average rent and quick actions" loading="lazy" tabindex="0" role="button" title="Click to enlarge">
+        <div class="thumbs">
+          <button type="button" aria-current="true" data-s="assets/tenant-1.webp" data-a="Desktop dashboard of the Tenant Management System showing expected monthly rent, active tenants, average rent and quick actions" data-c="Dashboard with the rent roll and quick actions" aria-label="Dashboard"><img src="assets/tenant-1.webp" alt="" loading="lazy"></button>
+          <button type="button" data-s="assets/tenant-2.webp" data-a="Payment history dialog listing invoices, months, paid amounts, dues and print buttons for one tenant" data-c="Payment history per tenant with invoices and dues" aria-label="Payment history"><img src="assets/tenant-2.webp" alt="" loading="lazy"></button>
+          <button type="button" data-s="assets/tenant-3.webp" data-a="Digital rent receipt showing invoice, tenant, rent month, gas bill, total paid and a prepaid meter codes guide" data-c="Rent receipt with prepaid meter codes" aria-label="Receipt"><img src="assets/tenant-3.webp" alt="" loading="lazy"></button>
+          <button type="button" data-s="assets/tenant-4.webp" data-a="Mobile layout of the dashboard with the menu button, rent roll, tenant stats and quick actions" data-c="Mobile layout of the dashboard" aria-label="Mobile"><img src="assets/tenant-4.webp" alt="" loading="lazy"></button>
+          <button type="button" data-s="assets/tenant-5.webp" data-a="Thermal printer receipt with invoice number, date, tenant, rent, gas bill, total and meter number" data-c="Thermal printer receipt" aria-label="Thermal receipt"><img src="assets/tenant-5.webp" alt="" loading="lazy"></button>
+        </div><figcaption>// Dashboard with the rent roll and quick actions</figcaption></figure>
       <p class="sub">A responsive web app that digitalizes rental property administration: tenant registration, monthly rent collection, advance payment tracking and custom thermal invoice printing for receipts.</p>
       <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span></div>
       <div class="btns"><a class="btn p" href="https://tenant-record-three.vercel.app/" target="_blank" rel="noopener">Live demo</a><a class="btn" href="https://github.com/fuad-dv/Tenant_record" target="_blank" rel="noopener">Source code</a></div></div></div>
     <div class="win tilt proj in"><div class="wb"><i class="d r"></i><i class="d y"></i><i class="d g"></i><span class="t">~/projects/tic-tac-toe</span></div><div class="wc">
       <span class="when">SE121 Structured Programming</span><h3>Terminal-Based Tic-Tac-Toe</h3>
-      <figure class="shot"><img id="tm" src="assets/ttt-1.png" alt="Tic-Tac-Toe game start in the VS Code terminal" loading="lazy">
-        <div class="thumbs" id="tt">
-          <button type="button" aria-current="true" data-s="assets/ttt-1.png" data-a="Game start with an empty board" aria-label="Game start"><img src="assets/ttt-1.png" alt="" loading="lazy"></button>
-          <button type="button" data-s="assets/ttt-2.png" data-a="Mid game, the computer takes the center" aria-label="Mid game"><img src="assets/ttt-2.png" alt="" loading="lazy"></button>
-          <button type="button" data-s="assets/ttt-3.png" data-a="Late game, both sides push for a win" aria-label="Late game"><img src="assets/ttt-3.png" alt="" loading="lazy"></button>
-          <button type="button" data-s="assets/ttt-4.png" data-a="Game over, the computer wins" aria-label="Game over"><img src="assets/ttt-4.png" alt="" loading="lazy"></button>
-        </div></figure>
+      <figure class="shot"><img class="main" src="assets/ttt-1.png" alt="Tic-Tac-Toe game start in the VS Code terminal" loading="lazy" tabindex="0" role="button" title="Click to enlarge">
+        <div class="thumbs">
+          <button type="button" aria-current="true" data-s="assets/ttt-1.png" data-a="Game start with an empty board" data-c="Game start with an empty board" aria-label="Game start"><img src="assets/ttt-1.png" alt="" loading="lazy"></button>
+          <button type="button" data-s="assets/ttt-2.png" data-a="Mid game, the computer takes the center" data-c="Mid game, the computer takes the center" aria-label="Mid game"><img src="assets/ttt-2.png" alt="" loading="lazy"></button>
+          <button type="button" data-s="assets/ttt-3.png" data-a="Late game, both sides push for a win" data-c="Late game, both sides push for a win" aria-label="Late game"><img src="assets/ttt-3.png" alt="" loading="lazy"></button>
+          <button type="button" data-s="assets/ttt-4.png" data-a="Game over, the computer wins" data-c="Game over, the computer wins" aria-label="Game over"><img src="assets/ttt-4.png" alt="" loading="lazy"></button>
+        </div><figcaption>// Game start with an empty board</figcaption></figure>
       <p class="sub">A console game in C where you play against a rule-based computer opponent. It wins when it can, blocks your winning moves, then prefers the center and corners. It also validates every input.</p>
       <div class="tags"><span>C</span><span>VS Code</span><span>GitHub</span></div>
       <div class="btns"><a class="btn p" href="https://github.com/fuad-dv/Tic-Tac-Toe" target="_blank" rel="noopener">Source code</a></div></div></div>
@@ -291,6 +304,8 @@ dialog::backdrop{background:rgba(2,8,4,.72);backdrop-filter:blur(8px)}
 </main>
 
 <footer><span class="c">/*</span> Build passed: 0 errors, 0 warnings. © 2026 MD Fuad Hassan Shiraji <span class="c">*/</span><br><button type="button" id="replay">Replay intro</button></footer>
+
+<dialog id="lb" aria-label="Screenshot preview"><button class="btn" id="lbx" type="button">Close</button><img id="lbi" alt=""></dialog>
 
 <dialog id="rv" aria-label="Document viewer">
   <div class="dlg win">
@@ -398,9 +413,13 @@ $$('[data-doc]').forEach(b=>b.onclick=()=>{const f=b.dataset.doc;rf.src=f+'#view
 $('#closeDoc').onclick=()=>rv.close();
 rv.addEventListener('click',e=>{if(e.target===rv)rv.close()});
 
-/* ---------- Tic-Tac-Toe screenshots ---------- */
-const tm=$('#tm');
-$$('#tt button').forEach(b=>b.onclick=()=>{tm.src=b.dataset.s;tm.alt=b.dataset.a;$$('#tt button').forEach(x=>x.removeAttribute('aria-current'));b.setAttribute('aria-current','true')});
+/* ---------- Project screenshots: thumbnails + lightbox ---------- */
+$$('.thumbs').forEach(t=>{const fig=t.closest('figure'),img=fig.querySelector('.main'),cap=fig.querySelector('figcaption');
+  t.querySelectorAll('button').forEach(b=>b.onclick=()=>{img.src=b.dataset.s;img.alt=b.dataset.a;if(cap)cap.textContent='// '+b.dataset.c;
+    t.querySelectorAll('button').forEach(x=>x.removeAttribute('aria-current'));b.setAttribute('aria-current','true')})});
+const lb=$('#lb'),lbi=$('#lbi');
+$$('.main').forEach(i=>{const open=()=>{lbi.src=i.src;lbi.alt=i.alt;lb.showModal()};i.onclick=open;i.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}}});
+$('#lbx').onclick=()=>lb.close();lb.addEventListener('click',e=>{if(e.target===lb||e.target===lbi)lb.close()});
 
 /* ---------- Contact form (Formspree) ---------- */
 const cf=$('#cf'),st=$('#st'),sb=$('#sb');
