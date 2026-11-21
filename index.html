@@ -135,12 +135,12 @@ dialog::backdrop{background:rgba(2,8,4,.72);backdrop-filter:blur(8px)}
 .bar strong{margin-right:auto;font:500 .85rem var(--m);color:var(--mut)}
 .bar .btn{padding:.45rem .9rem;font-size:.78rem;animation:none}
 .dlg iframe{flex:1;width:calc(100% - 1.4rem);margin:0 .7rem .7rem;border:0;border-radius:10px;background:#fff}
-#boot{position:fixed;inset:0;z-index:100;background:#030605;display:grid;place-items:center;padding:1rem;transition:transform 1s cubic-bezier(.77,0,.18,1)}
+#boot{position:fixed;inset:0;z-index:100;background:#030605;display:grid;place-items:center;padding:1rem;transition:transform .7s cubic-bezier(.77,0,.18,1)}
 #boot::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
 #boot.out{transform:translateY(-100%)}
 .nb #boot{display:none}
 .bw{width:min(720px,100%);box-shadow:0 0 80px -10px rgba(95,224,74,.35)}
-#bt{font:400 clamp(.74rem,2.3vw,.95rem)/1.75 var(--m);padding:1.2rem 1.3rem;min-height:340px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink)}
+#bt{font:400 clamp(.74rem,2.3vw,.95rem)/1.75 var(--m);padding:1.2rem 1.3rem;min-height:290px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink)}
 #skip{position:absolute;right:1.2rem;bottom:1.2rem;z-index:2;background:none;border:1px solid var(--line);color:var(--mut);padding:.5rem 1rem;border-radius:8px;font:500 .8rem var(--m);cursor:pointer}
 #skip:hover{color:var(--g2);border-color:var(--g)}
 .ok2{color:var(--g)}
@@ -335,7 +335,6 @@ const LINES=[
  [T('v','  name'),T('pn',': '),T('s','"MD Fuad Hassan Shiraji"'),T('pn',',')],
  [T('v','  role'),T('pn',': '),T('s','"Software Engineering Student"'),T('pn',',')],
  [T('v','  stack'),T('pn',': ['),T('s','"Python"'),T('pn',', '),T('s','"C"'),T('pn',', '),T('s','"C++"'),T('pn',', '),T('s','"JavaScript"'),T('pn','],')],
- [T('v','  learning'),T('pn',': ['),T('s','"Databases"'),T('pn',', '),T('s','"Computer Architecture"'),T('pn','],')],
  [T('v','  graduates'),T('pn',': '),T('n','2028'),T('pn',',')],
  [T('pn','};')],
  [T('f','$ '),T('v','npm run '),T('k','build')],
@@ -348,15 +347,15 @@ async function boot(){
   const w=ms=>skip?Promise.resolve():sleep(ms);
   for(const line of LINES){
     if(line==='bar'){const sp=document.createElement('span');sp.className='n';bt.insertBefore(sp,caret);
-      for(let i=0;i<=12;i++){sp.textContent='Compiling  ['+'█'.repeat(i)+'░'.repeat(12-i)+'] '+Math.round(i/12*100)+'%';await w(60)}
+      for(let i=0;i<=10;i++){sp.textContent='Compiling  ['+'█'.repeat(i)+'░'.repeat(10-i)+'] '+Math.round(i*10)+'%';await w(32)}
       bt.insertBefore(document.createTextNode('\n'),caret);continue}
     for(const [c,t] of line){const sp=document.createElement('span');sp.className=c;bt.insertBefore(sp,caret);
-      for(const ch of t){sp.textContent+=ch;await w(13)}}
-    bt.insertBefore(document.createTextNode('\n'),caret);await w(120);
+      for(const ch of t){sp.textContent+=ch;await w(4)}}
+    bt.insertBefore(document.createTextNode('\n'),caret);await w(40);
   }
-  await w(550);
+  await w(250);
   try{sessionStorage.setItem('booted','1')}catch(e){}
-  const b=$('#boot');b.classList.add('out');start();setTimeout(()=>{b.style.display='none'},1100);
+  const b=$('#boot');b.classList.add('out');start();setTimeout(()=>{b.style.display='none'},800);
 }
 
 /* ---------- Hero role typer ---------- */
